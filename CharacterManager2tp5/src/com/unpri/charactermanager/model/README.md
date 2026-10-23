@@ -62,3 +62,51 @@ Fitur ini membantu pengguna mengetahui karakter dengan serangan tertinggi tanpa 
 ### Google Docs — Analisis Reference dan Rancangan
 
 Link Google Docs TP5: https://docs.google.com/document/d/1xtlhPikuaPmoXqg0Rlw-7Hg-x8InDUi6afTEVgOw6Z8/edit?usp=sharing
+
+## TP8 / AP10 — Character Manager Sprint #3
+
+### 1. Deskripsi
+
+Character Manager Sprint #3 merupakan pengembangan aplikasi Character Manager menggunakan Java Swing. Pada tahap ini, aplikasi dikembangkan dengan menambahkan antarmuka grafis (GUI), menampilkan data karakter secara dinamis, serta menampilkan statistik rata-rata level karakter. Pengembangan ini juga menerapkan konsep Model-View-Controller (MVC) untuk memisahkan tanggung jawab pengelolaan data dan tampilan aplikasi.
+
+### 2. Fitur AP10
+
+- **MainWindow:** Menampilkan jendela utama aplikasi menggunakan `JFrame`.
+- **Daftar Karakter Dinamis:** Menampilkan daftar karakter berdasarkan data yang diperoleh dari `CharacterManager`.
+- **Statistik Rata-rata Level:** Menghitung rata-rata level karakter dan menampilkannya menggunakan `JLabel`.
+- **Scrollable Interface:** Menggunakan `JScrollPane` agar daftar karakter dapat digulir apabila jumlah karakter bertambah.
+- **Event Dispatch Thread (EDT):** Menggunakan `SwingUtilities.invokeLater()` untuk menjalankan antarmuka Swing dengan benar.
+- **Penerapan MVC:** Memisahkan model karakter, pengelolaan data, dan tampilan antarmuka.
+
+### 3. Struktur Project
+
+```text
+CharacterManager/
+├── README.md
+└── src/
+    ├── Main.java
+    └── com/
+        └── unpri/
+            └── charactermanager/
+                ├── manager/
+                │   └── CharacterManager.java
+                ├── model/
+                │   ├── Character.java
+                │   └── CharacterType.java
+                └── view/
+                    └── MainWindow.java
+```
+
+### 4. Screenshot Output AP10
+
+Screenshot ini menunjukkan tampilan GUI Character Manager, daftar karakter, dan statistik rata-rata level setelah aplikasi dijalankan.
+
+### 5. Analisis MVC
+
+Analisis MVC menjelaskan pembagian tanggung jawab antara Model, View, dan Controller pada aplikasi Character Manager, hubungan antarkomponen, serta manfaat pemisahan kode dalam pengembangan aplikasi Java Swing.
+
+Link Google Docs Analisis MVC AP10: (https://docs.google.com/document/d/1Z-yQpaCUtLarax5MaCh1zlODWXHPozT-HgMNBguNusE/edit?usp=sharing)
+
+### 6. Kesimpulan
+
+Pada Sprint #3, aplikasi Character Manager dikembangkan dengan antarmuka grafis berbasis Java Swing. Data karakter ditampilkan berdasarkan isi `CharacterManager`, sedangkan rata-rata level dihitung dan ditampilkan melalui `JLabel`. Pengembangan ini menjadi latihan penerapan pemisahan tanggung jawab antarkomponen dan konsep MVC dalam aplikasi desktop Java.

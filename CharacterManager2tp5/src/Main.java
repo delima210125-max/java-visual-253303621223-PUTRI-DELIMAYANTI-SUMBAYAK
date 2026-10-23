@@ -2,6 +2,8 @@
 import com.unpri.charactermanager.model.Character;
 import com.unpri.charactermanager.model.CharacterType;
 import com.unpri.charactermanager.manager.CharacterManager;
+import com.unpri.charactermanager.view.MainWindow;
+import javax.swing.SwingUtilities;
 
 import java.util.List;
 
@@ -27,7 +29,11 @@ public class Main {
         System.out.println(c4);
         System.out.println("Mana: " + c4.getMana());
         System.out.println("Masih hidup: " + c4.isAlive());
-
+        
+        // AP10: Dua karakter baru
+        Character c5 = new Character("Gimli", CharacterType.WARRIOR, 4);
+        Character c6 = new Character("Elara", CharacterType.HEALER, 2);
+        
         // TP5: Pengujian CharacterManager
         System.out.println("\n=== TP5: CHARACTER MANAGER ===");
         CharacterManager manager = new CharacterManager();
@@ -36,6 +42,8 @@ public class Main {
         System.out.println("Tambah Merlin: " + manager.addCharacter(c2));
         System.out.println("Tambah Legolas: " + manager.addCharacter(c3));
         System.out.println("Tambah Luna: " + manager.addCharacter(c4));
+        System.out.println("Tambah Gimli: " + manager.addCharacter(c5));
+        System.out.println("Tambah Elara: " + manager.addCharacter(c6));
 
         Character duplicate = new Character("aragorn", CharacterType.WARRIOR);
         System.out.println("Tambah nama duplikat Aragorn: "
@@ -106,6 +114,12 @@ public class Main {
             System.out.println("Attack tertinggi: "
                     + strongest.getAttack());
         }
+        // AP10: Jalankan GUI pada Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+        MainWindow window = new MainWindow(manager);
+        window.setVisible(true);
+});
+        
 
     }
     
